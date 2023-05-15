@@ -14,22 +14,17 @@ default:
       - create
       - destroy
 
-editor:
-  models:
-    Scaffolding::CompletelyConcrete::TangibleThing: manage
-    Scaffolding::AbsolutelyAbstract::CreativeConcept:
-      - read
-      - update
-
 admin:
-  includes:
-    - editor
   manageable_roles:
     - admin
-    - editor
+    - client
   models:
+    Project: manage
     Team: manage
     Membership: manage
     Scaffolding::AbsolutelyAbstract::CreativeConcept: manage
     Platform::Application: manage
     Scaffolding::AbsolutelyAbstract::CreativeConcepts::Collaborator: manage
+
+client:
+    Project: read

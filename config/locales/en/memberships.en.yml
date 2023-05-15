@@ -1,6 +1,14 @@
 en:
   memberships:
     fields:
+      role_ids:
+        options:
+          client:
+            label: Client
+            description: This is the client account
+          admin:
+            label: Admin
+            description: This is the admin account
       _:
       # 🚅 super scaffolding will insert new fields above this line.
   activerecord:

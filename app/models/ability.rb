@@ -7,6 +7,7 @@ class Ability
   end
 
   def initialize(user)
+    permit user, through: :memberships, parent: :team if user.present?
     if user.present?
 
       # permit is a Bullet Train created "magic" method. It parses all the roles in `config/roles.yml` and automatically inserts the appropriate `can` method calls here

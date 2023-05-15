@@ -1,4 +1,5 @@
 class Membership < ApplicationRecord
+  include Roles::Support
   include Memberships::Base
   # 🚅 add concerns above.
 
